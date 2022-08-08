@@ -1,0 +1,12 @@
+{
+    "title": "Application React",
+    "content_description": "technologie",
+    "image_icon": {
+        "url": "image.png",
+        "size": "16x16"
+    },
+    "theme_color": {
+        "dark": "black",
+        "light": "white"
+    }
+}
