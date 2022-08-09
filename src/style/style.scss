@@ -1,10 +1,27 @@
 // Import de polices d'écritures de Google Fonts
-// @import url();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 //Création de varibles de styles
 :root{
     --full-width: 100%;
     --full-height: 100vh;
+    --height-section-recherche: 130px;
+    --width-recherche-bar: 65%;
+    --height-recherche-bar: 65px;
+    --size-button-recherche: 50px;
+    --size-carte-voiture: 310px;
+    --size-texte-voiture: 40px;
+    --montserrat: 'Montserrat', sans-serif;
+    --cinzel: 'Cinzel', serif;
+    --rose-pastel: #BB6F9C;
+    --background-clair: #F5F1E8;
+    --background-header: #EEE9E0;
+    --background-header-75: #eee9e0be;
+    --couleur-texte: #515050;
+    --couleur-voiture: #DED5C7;
+    --border-radius-recherche-bar: 35px;
+    --margin-section-vehicules: 65px;
 }
 
 body{
@@ -22,4 +39,7 @@ body{
 }
 
 //Import de fichiers styles des composants
-// @import url();
+@import url(Accueil.css);
+@import url(Header.css);
+@import url(Recherche.css);
+@import url(GridVehicules.css);
