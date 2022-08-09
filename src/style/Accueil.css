@@ -1,0 +1,39 @@
+main.main-accueil{
+    background-color: var(--background-clair);
+}
+
+section.section-location-image{
+    width: var(--full-width);
+    height: 280px;
+    background-image: url(../components/assets/road_image.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: brightness(40%);
+}
+
+div.flex-location{
+    width: var(--full-width);
+    height: var(--full-width);
+    background-color: rgba(0, 0, 0, 0.438);
+    display: flex;
+    align-items: center;
+}
+
+button.location-boutton{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    column-gap: 15px;
+    background-color: var(--background-header-75);
+    border-radius: 25px;
+    padding: 15px 35px;
+    position: absolute;
+    right: 45px;
+    font-family: var(--montserrat);
+    border: none;
+    cursor: pointer;
+}
+
+.fleche-droite{
+    color: var(--rose-pastel);
+    font-size: 17px;
+}
