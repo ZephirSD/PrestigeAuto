@@ -1,8 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import MenuCarte from './part/MenuCarte';
 
 function Header() {
+  const [switchToggle, setSwitchToggle] = useState(false);
+  function toggleMenu(){
+    setSwitchToggle(switchToggle => !switchToggle);
+  }
   return (
     <>
         <header>
@@ -13,7 +19,7 @@ function Header() {
                 <span>Découvrir</span>
                 <span>Contact</span>
             </nav>
-            <div className='menu_case'>
+            <div className='menu_case' onClick={toggleMenu}>
               <div className='menu-button'>
                 <div>
                   <FontAwesomeIcon icon={faBars} className='bars-menu'/>
@@ -26,6 +32,9 @@ function Header() {
               </div>
             </div>
         </header>
+        {
+          switchToggle === true ? (<MenuCarte boolConnect={false}/>) : <></>
+        }
     </>
   )
 }
