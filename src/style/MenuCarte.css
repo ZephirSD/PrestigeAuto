@@ -1,0 +1,22 @@
+div.flex_carte_menu{
+    position: absolute;
+    background-color: var(--rose-pastel);
+    width: var(--size-case-menu);
+    height: var(--size-case-menu);
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    box-shadow: 2px 3px 8px rgba(100,100,100,0.5);
+    margin-top: 25px;
+    right: 25px;
+}
+
+h2.lien_menu_carte{
+    font-family: var(--montserrat);
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+}
