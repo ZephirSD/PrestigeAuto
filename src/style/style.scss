@@ -13,6 +13,8 @@
     --size-carte-voiture: 310px;
     --size-texte-voiture: 40px;
     --size-case-menu: 265px;
+    --size-case-connexion: 75%;
+    --size-boutton-connexion: 35%;
     --montserrat: 'Montserrat', sans-serif;
     --cinzel: 'Cinzel', serif;
     --rose-pastel: #BB6F9C;
@@ -45,3 +47,5 @@ body{
 @import url(Recherche.css);
 @import url(GridVehicules.css);
 @import url(MenuCarte.css);
+@import url(Connexion.css);
+@import url(Formulaire.css);
