@@ -1,0 +1,25 @@
+div.case_filter{
+    position: absolute;
+    width: var(--full-width);
+    height: var(--full-height);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+}
+
+div.case_connexion{
+    width: var(--size-case-connexion);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-header);
+    border-radius: 55px;
+    box-shadow: 7px 8px 17px rgba(100,100,100,0.5);
+}
