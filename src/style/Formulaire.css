@@ -1,0 +1,40 @@
+
+div.case_input{
+    display: flex;
+    flex-direction: column;
+    width: var(--size-case-connexion);
+    margin: 10px 0px;
+}
+
+div.case_input label{
+    font-family: var(--montserrat);
+    color: var(--couleur-texte);
+    padding: 10px 0px 5px 0px;
+}
+
+div.case_input input{
+    background-color: var(--couleur-voiture);
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    font-family: var(--montserrat);
+    font-size: 17px;
+    color: black;
+}
+
+div.case_input button{
+    background-color: var(--rose-pastel);
+    padding: 15px 0px;
+    border: none;
+    font-family: var(--montserrat);
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    width: var(--size-boutton-connexion);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 auto;
+}
