@@ -16,7 +16,8 @@ div.flex_carte_menu{
 
 h2.lien_menu_carte{
     font-family: var(--montserrat);
-    font-size: 22px;
+    font-size: 18px;
     color: white;
     font-weight: 400;
+    cursor: pointer;
 }
