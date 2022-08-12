@@ -9,6 +9,9 @@ function Header() {
   function toggleMenu(){
     setSwitchToggle(switchToggle => !switchToggle);
   }
+  if(switchToggle === true){
+    window.scrollTo({top: 0,left:0});
+  }
   return (
     <>
         <header>
@@ -33,7 +36,7 @@ function Header() {
             </div>
         </header>
         {
-          switchToggle === true ? (<MenuCarte boolConnect={false}/>) : <></>
+          switchToggle === true ? (<MenuCarte boolConnect={false} switchBool={switchToggle}/>) : <></>
         }
     </>
   )
