@@ -38,7 +38,7 @@ function GridVehicules({ dataVehicules }) {
                                 className="case-voiture-render"
                               >
                                 <Canvas>
-                                  <ambientLight intensity={1.5} />
+                                  <ambientLight intensity={10} />
                                   <OrbitControls />
                                   <Suspense fallback={<Loader3D/>}>
                                   {
