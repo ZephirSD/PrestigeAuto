@@ -1,0 +1,18 @@
+section.loader_section{
+    width: var(--full-width);
+    height: calc(var(--size-carte-voiture) - var(--size-texte-voiture));
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.boxStyle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
