@@ -2,21 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-function GridVehicules() {
-  const [dataVehicules, setDataVehicules] = useState([]);
+function GridVehicules({dataVehicules}) {
   const [dataCategories, setDataCategories] = useState([]);
-  const fetchVehicules = async () => {
-    const api = await fetch("http://localhost:5000/api/vehicules");
-    const reponse = await api.json();
-    setDataVehicules(reponse);
-  };
   const fetchCategories = async () => {
     const api = await fetch("http://localhost:5000/api/categories");
     const reponse = await api.json();
     setDataCategories(reponse);
   };
   useEffect(() => {
-    fetchVehicules();
     fetchCategories();
   }, []);
   return (
