@@ -7,6 +7,7 @@
     --full-width: 100%;
     --full-height: 100vh;
     --height-section-recherche: 130px;
+    --height-header: 65px;
     --width-recherche-bar: 65%;
     --height-recherche-bar: 65px;
     --size-button-recherche: 50px;
@@ -27,6 +28,8 @@
     --border-radius-recherche-bar: 35px;
     --margin-section-vehicules: 65px;
     --margin-bloc-liste-recherche: 15%;
+    --margin-grid-vehicules-horizontal: 65px;
+    --margin-grid-vehicules-vertical: 35px;
 }
 
 body{
@@ -52,3 +55,4 @@ body{
 @import url(Connexion&Inscription.css);
 @import url(Formulaire.css);
 @import url(Loader.css);
+@import url(VehiculesPages.css);
