@@ -1,6 +1,6 @@
 header{
     width: var(--full-width);
-    height: 65px;
+    height: var(--height-header);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     box-shadow: 0px 2px 6px rgba(100,100,100,0.5);
