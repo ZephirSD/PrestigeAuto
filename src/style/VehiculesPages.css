@@ -1,0 +1,154 @@
+main.main_vehicules{
+    background-color: var(--couleur-voiture);
+    width: var(--full-width);
+    height: var(--full-height);
+}
+
+div.grid_vehicules2{
+    width: calc(var(--full-width) - (var(--margin-grid-vehicules-horizontal) * 2));
+    height: calc((var(--full-height) - var(--height-header)) - (var(--margin-grid-vehicules-vertical) * 2));
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: var(--margin-grid-vehicules-vertical) var(--margin-grid-vehicules-horizontal);
+    column-gap: 75px;
+}
+
+div.grid_vehicules_info{
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    row-gap: 30px;
+}
+
+div.grid_vehicules_info div{
+    background-color: var(--background-clair);
+}
+
+div.canvas_vehicules{
+    border-radius: 35px;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.case_categories_vehicules{
+    height: 70px;
+    width: var(--full-width);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.categorie_vehicules{
+    color: var(--couleur-texte);
+    font-size: 18px;
+    font-family: var(--montserrat);
+}
+
+div.case_montant_vehicules{
+    height: 95px;
+    width: var(--full-width);
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    overflow: hidden;
+}
+
+div.case_montant_vehicules div.title_montant,
+div.case_montant_vehicules div.icon_montant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.title_montant{
+    font-family: var(--cinzel);
+    font-size: 24px;
+    height: var(--full-width);
+    color: var(--couleur-texte);
+}
+
+div.int_montant{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+
+div.int_montant div{
+    display: flex;
+    justify-content: center;
+}
+
+div.montant{
+    align-items:flex-end;
+    color: var(--couleur-texte);
+    font-family: var(--cinzel);
+}
+
+div.jour_reserve{
+    align-items: flex-start;
+    font-size: 13px;
+    font-family: var(--montserrat);
+    color: var(--couleur-texte);
+}
+
+.credit_cart{
+    font-size: 32px;
+    color: var(--rose-pastel);
+    cursor: pointer;
+}
+
+div.grid_calendrier_vehicules{
+    background-color: var(--background-clair);
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.rdrCalendarWrapper{
+    width: calc(var(--full-width) - (var(--margin-calendar) * 2));
+    height: 100%;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: unset;
+    color: unset;
+    margin: 0 var(--margin-calendar);
+}
+
+.rdrDateDisplayItem{
+    background-color: var(--couleur-voiture);
+}
+
+.rdrDateDisplayWrapper{
+    background-color: transparent;
+}
+
+.rdrMonth {
+    padding: 0;
+    width: 100%;
+}
+
+.rdrMonthAndYearPickers select{
+    color: var(--couleur-texte);
+    font-family: var(--montserrat);
+    font-size: 18px;
+}
+
+.rdrWeekDay{
+    color: var(--couleur-texte);
+    font-family: var(--montserrat);
+    height: 100%;
+}
+
+.rdrDays{
+    height: 100%;
+}
+
+.rdrDateDisplayItemActive input,
+.rdrDateDisplayItem input{
+    color: var(--couleur-texte);
+    font-family: var(--montserrat);
+}
+
+.rdrDayNumber span{
+    font-size: 16px;
+    font-family: var(--montserrat);
+    color: var(--couleur-texte);
+}
