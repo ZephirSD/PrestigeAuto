@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { baseVehicules } from "../assets/bases_donnees/baseVehicules";
@@ -6,16 +6,7 @@ import { Canvas } from "@react-three/fiber";
 import Loader3D from "./Loader3D";
 import { Link } from 'react-router-dom';
 
-function GridVehicules({ dataVehicules }) {
-  const [dataCategories, setDataCategories] = useState([]);
-  const fetchCategories = async () => {
-    const api = await fetch("http://localhost:5000/api/categories");
-    const reponse = await api.json();
-    setDataCategories(reponse);
-  };
-  useEffect(() => {
-    fetchCategories();
-  }, []);
+function GridVehicules({ dataVehicules, dataCategories }) {
   return (
     <>
       <section className="section-vehicules">

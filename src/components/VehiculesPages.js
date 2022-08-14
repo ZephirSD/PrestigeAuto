@@ -12,17 +12,11 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import * as rdrLocales from 'react-date-range/dist/locale';
 
-function VehiculesPages({ dataVehicules }) {
+function VehiculesPages({ dataVehicules, dataCategories }) {
   const param = useParams();
-  const [dataCategories, setDataCategories] = useState([]);
   const [startDay, setStartDay] = useState();
   const [endDay, setEndDay] = useState();
   const [shiftDay, setShiftDay] = useState(1);
-  const fetchCategories = async () => {
-    const api = await fetch("http://localhost:5000/api/categories");
-    const reponse = await api.json();
-    setDataCategories(reponse);
-  };
   const [stateDate, setStateDate] = useState([
     {
       startDate: new Date(),
@@ -42,9 +36,6 @@ function VehiculesPages({ dataVehicules }) {
     const nombreJour = parseInt(Math.ceil(Math.abs(endDay - startDay) / (1000 * 60 * 60 * 24)));
     setShiftDay(nombreJour);
   }
-  useEffect(() => {
-    fetchCategories();
-  },[]);
   useEffect(() => {
     ecartDate();
     calculateDay();

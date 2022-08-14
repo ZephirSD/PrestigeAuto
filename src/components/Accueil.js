@@ -6,7 +6,7 @@ import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import GridVehicules from './part/GridVehicules';
 
 
-function Accueil({dataVehicules}) {
+function Accueil({dataVehicules, dataCategories}) {
   return (
     <>
       <main className='main-accueil'>
@@ -17,7 +17,7 @@ function Accueil({dataVehicules}) {
             <button className='location-boutton'>Prenez un(e) taxi / location <FontAwesomeIcon icon={faArrowRightLong} className='fleche-droite'/></button>
           </div>
         </section>
-        <GridVehicules dataVehicules={dataVehicules}/>
+        <GridVehicules dataVehicules={dataVehicules} dataCategories={dataCategories}/>
       </main>
     </>
   )
