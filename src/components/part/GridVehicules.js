@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { baseVehicules } from "../assets/bases_donnees/baseVehicules";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import Loader3D from "./Loader3D";
+import { Link } from 'react-router-dom';
 
 function GridVehicules({ dataVehicules }) {
   const [dataCategories, setDataCategories] = useState([]);
@@ -34,12 +34,12 @@ function GridVehicules({ dataVehicules }) {
                       <SwiperSlide>
                         <>
                           <div className="carte-vehicule">
+                            <Link to={`/vehicules/${voiture._id}`}>                            
                               <div
                                 className="case-voiture-render"
                               >
                                 <Canvas>
                                   <ambientLight intensity={10} />
-                                  <OrbitControls />
                                   <Suspense fallback={<Loader3D/>}>
                                   {
                                     baseVehicules.map((base) => (
@@ -55,6 +55,7 @@ function GridVehicules({ dataVehicules }) {
                                   </Suspense>
                                 </Canvas>
                               </div>
+                            </Link>
                             <div className="nom-voiture">
                               {voiture.nom_vehicules}
                             </div>
