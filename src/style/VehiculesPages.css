@@ -152,3 +152,7 @@ div.grid_calendrier_vehicules{
     font-family: var(--montserrat);
     color: var(--couleur-texte);
 }
+
+.rdrDayToday .rdrDayNumber span:after{
+    background-color: var(--rose-pastel);
+}
