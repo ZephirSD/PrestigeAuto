@@ -1,0 +1,123 @@
+main.main_location{
+    background-color: var(--couleur-voiture);
+    width: var(--full-width);
+    height: var(--full-height);
+}
+
+div.case_switch{
+    width: 30vw;
+    background-color: white;
+    height: var(--height-case-switch);
+    margin: var(--margin-top-case-switch) auto 0px auto;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0px var(--padding-case-switch-horizontal);
+}
+
+.lien_switch{
+    text-decoration: none;
+    width: var(--full-width);
+    height: var(--full-width);
+    display: flex;
+    justify-content: center;
+}
+
+div.switch_anime{
+    position: absolute;
+    width: calc(100% - (var(--padding-case-switch-horizontal) * 2));
+    height: calc(100% - (10px * 2));
+}
+
+div.indicateur{
+    width: 50%;
+    height: 100%;
+    background-color: var(--couleur-voiture);
+    border-radius: 15px;
+}
+
+div.boutton_location,
+div.boutton_taxi{
+    width: 50%;
+    padding: 5px 0px;
+    color: var(--couleur-texte);
+    font-family: var(--montserrat);
+    text-transform: capitalize;
+    z-index: 3;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+div.grid_location_case{
+    width: calc(var(--full-width) - (var(--margin-grid-vehicules-horizontal) * 2));
+    height: calc(var(--full-height) - var(--height-header) - var(--margin-grid-vehicules-vertical) * 2 - var(--margin-top-case-switch) - var(--height-case-switch));
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: var(--margin-grid-vehicules-vertical) var(--margin-grid-vehicules-horizontal);
+    column-gap: 75px;
+    position: relative;
+}
+
+div.case_select_vehicules,
+div.case_info_location{
+    display: grid;
+    row-gap: 25px;
+}
+
+div.case_select_vehicules{
+    grid-template-rows: auto 1fr;
+}
+
+div.case_info_location{
+    grid-template-rows: 1fr auto;
+}
+
+div.select_vehicules{
+    width: var(--full-width);
+    height: 40px;
+    border-radius: 25px;
+}
+
+div.case_voiture_location,
+div.case_calendrier_loctax,
+div.case_montant_loctax,
+div.select_vehicules{
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+div.case_voiture_location{
+    border-radius: 35px;
+}
+
+div.case_calendrier_loctax{
+    border-radius: 35px;
+}
+
+div.case_montant_loctax{
+    height: 75px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+
+div.case_montant_loctax div.title_montant,
+div.case_montant_loctax div.icon_montant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+select.choix_vehicules{
+    width: calc(var(--full-width) - (25px * 2));
+    height: var(--full-width);
+    padding: 0 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: var(--montserrat);
+    appearance: none;
+    color: var(--couleur-texte);
+}
