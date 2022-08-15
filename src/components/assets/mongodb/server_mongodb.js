@@ -31,7 +31,7 @@ app.get('/api/vehicules', (req, res) => {
     else{
       res.json(result);
     }
-  })
+  }).sort({"nom_vehicules": 1})
 })
 
 app.get('/api/categories', (req, res) => {
