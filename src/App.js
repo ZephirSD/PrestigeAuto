@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Accueil from './components/Accueil';
 import VehiculesPages from './components/VehiculesPages';
+import LocationTaxis from './components/Location_Taxis';
 import  './style/style.scss';
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
       <Routes>
           <Route path='/' element={<Accueil dataVehicules={dataVehicules} dataCategories={dataCategories}/>}/>
           <Route path='/vehicules/:id_voiture' element={<VehiculesPages dataVehicules={dataVehicules} dataCategories={dataCategories}/>}/>
+          <Route path='/location' element={<LocationTaxis dataVehicules={dataVehicules}/>}/>
+          <Route path='/taxi' element={<LocationTaxis dataVehicules={dataVehicules}/>}/>
       </Routes>
     </>
   )
