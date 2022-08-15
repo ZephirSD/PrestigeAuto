@@ -10,6 +10,7 @@
     --height-header: 65px;
     --width-recherche-bar: 65%;
     --height-recherche-bar: 65px;
+    --height-case-switch: 50px;
     --size-button-recherche: 50px;
     --size-carte-voiture: 310px;
     --size-texte-voiture: 40px;
@@ -31,6 +32,8 @@
     --margin-grid-vehicules-horizontal: 65px;
     --margin-grid-vehicules-vertical: 35px;
     --margin-calendar: 25px;
+    --padding-case-switch-horizontal: 20px;
+    --margin-top-case-switch: 35px;
 }
 
 body{
@@ -57,3 +60,4 @@ body{
 @import url(Formulaire.css);
 @import url(Loader.css);
 @import url(VehiculesPages.css);
+@import url(Location.css);
