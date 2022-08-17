@@ -50,7 +50,8 @@ div.boutton_taxi{
     cursor: pointer;
 }
 
-div.grid_location_case{
+div.grid_location_case,
+div.grid_taxi_case{
     width: calc(var(--full-width) - (var(--margin-grid-vehicules-horizontal) * 2));
     height: calc(var(--full-height) - var(--height-header) - var(--margin-grid-vehicules-vertical) * 2 - var(--margin-top-case-switch) - var(--height-case-switch));
     display: grid;
@@ -61,16 +62,20 @@ div.grid_location_case{
 }
 
 div.case_select_vehicules,
-div.case_info_location{
+div.case_info_location,
+div.case_map_taxi,
+div.case_info_taxi{
     display: grid;
     row-gap: 25px;
 }
 
-div.case_select_vehicules{
+div.case_select_vehicules,
+div.case_map_taxi{
     grid-template-rows: auto 1fr;
 }
 
-div.case_info_location{
+div.case_info_location,
+div.case_info_taxi{
     grid-template-rows: 1fr auto;
 }
 
@@ -80,20 +85,73 @@ div.select_vehicules{
     border-radius: 25px;
 }
 
+div.case_input_taxi{
+    width: calc(var(--full-width) - (var(--padding-case-input-map) * 2));
+    height: 40px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    column-gap: 10px;
+    padding: 0 var(--padding-case-input-map);
+}
+
+input.input_map{
+    margin: var(--margin-input-map) 0;
+    background-color: var(--couleur-voiture);
+    border: none;
+    outline: none;
+    font-family: var(--montserrat);
+    border-radius: 15px;
+    padding: 0 10px;
+}
+
+button.boutton_map{
+    background-color: var(--rose-pastel);
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--margin-input-map) 0;
+    width: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 div.case_voiture_location,
 div.case_calendrier_loctax,
 div.case_montant_loctax,
-div.select_vehicules{
+div.select_vehicules,
+div.case_input_taxi,
+div.map_taxi{
     background-color: white;
     overflow: hidden;
     position: relative;
 }
-div.case_voiture_location{
+
+div.case_voiture_location,
+div.map_taxi{
     border-radius: 35px;
 }
 
 div.case_calendrier_loctax{
     border-radius: 35px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+div.horaire_div{
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2.titre_horaire{
+    font-size: 22px;
+    font-family: var(--cinzel);
+    font-weight: 300;
+    color: var(--couleur-texte);
 }
 
 div.case_montant_loctax{
@@ -120,4 +178,27 @@ select.choix_vehicules{
     font-family: var(--montserrat);
     appearance: none;
     color: var(--couleur-texte);
+}
+
+.map_container{
+    width: var(--full-width);
+    height: var(--full-width);
+}
+
+input.input_hora{
+    width: 75px;
+    height: 15px;
+    border: none;
+    background-color: var(--couleur-voiture);
+    font-family: var(--montserrat);
+    padding: 6px 15px;
+    color: var(--couleur-texte);
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input.input_hora::-webkit-datetime-edit-ampm-field{
+    color: var(--couleur-texte);
+    width: 30px;
 }
