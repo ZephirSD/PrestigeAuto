@@ -34,6 +34,8 @@
     --margin-calendar: 25px;
     --padding-case-switch-horizontal: 20px;
     --margin-top-case-switch: 35px;
+    --margin-input-map: 5px;
+    --padding-case-input-map: 15px;
 }
 
 body{
@@ -60,4 +62,4 @@ body{
 @import url(Formulaire.css);
 @import url(Loader.css);
 @import url(VehiculesPages.css);
-@import url(Location.css);
+@import url(Location&Taxi.css);
