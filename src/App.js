@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Accueil from './components/Accueil';
-import VehiculesPages from './components/VehiculesPages';
-import LocationTaxis from './components/Location_Taxis';
-import  './style/style.scss';
+import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Accueil from "./components/Accueil";
+import VehiculesPages from "./components/VehiculesPages";
+import LocationTaxis from "./components/Location_Taxis";
+import "./style/style.scss";
 
 function App() {
   const [dataVehicules, setDataVehicules] = useState([]);
@@ -21,17 +21,39 @@ function App() {
   useEffect(() => {
     fetchVehicules();
     fetchCategories();
-  },[])
+  }, []);
   return (
     <>
       <Routes>
-          <Route path='/' element={<Accueil dataVehicules={dataVehicules} dataCategories={dataCategories}/>}/>
-          <Route path='/vehicules/:id_voiture' element={<VehiculesPages dataVehicules={dataVehicules} dataCategories={dataCategories}/>}/>
-          <Route path='/location' element={<LocationTaxis dataVehicules={dataVehicules}/>}/>
-          <Route path='/taxi' element={<LocationTaxis dataVehicules={dataVehicules}/>}/>
+        <Route
+          path="/"
+          element={
+            <Accueil
+              dataVehicules={dataVehicules}
+              dataCategories={dataCategories}
+            />
+          }
+        />
+        <Route
+          path="/vehicules/:id_voiture"
+          element={
+            <VehiculesPages
+              dataVehicules={dataVehicules}
+              dataCategories={dataCategories}
+            />
+          }
+        />
+        <Route
+          path="/location"
+          element={<LocationTaxis dataVehicules={dataVehicules}/>}
+        />
+        <Route
+          path="/taxi"
+          element={<LocationTaxis dataVehicules={dataVehicules}/>}
+        />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
