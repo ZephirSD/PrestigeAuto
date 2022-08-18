@@ -60,7 +60,7 @@ function LocationTaxis({dataVehicules}) {
           {switchPath === "location" ? (
             <Location dataVehicules={dataVehicules}/>
           ) : switchPath === "taxi" ? (
-            <Taxi />
+            <Taxi/>
           ) : (
             <></>
           )}
