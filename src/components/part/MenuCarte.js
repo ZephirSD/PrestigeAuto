@@ -1,24 +1,21 @@
-import React, { useState } from "react";
-import Connexion from './Connexion';
+import React from "react";
 
-function MenuCarte({ boolConnect, switchBool }) {
-  const [switchConnexion, setSwitchConnexion] = useState(false);
-  function toggleConnexion(){
-    setSwitchConnexion(switchConnexion => !switchConnexion);
-    if(switchConnexion === true){
-      switchBool = false;
-    }
-    else{
-      switchBool = true;
-    }
+function MenuCarte({ boolConnect, switchBool, toggleSwitchIns, toggleSwitchCon }) {
+  const boutonConnexion = () => {
+    toggleSwitchCon(true);
+    switchBool(false);
+  }
+  const boutonInscription = () => {
+    toggleSwitchIns(true);
+    switchBool(false);
   }
   return (
     <>
         <div className="flex_carte_menu">
           {boolConnect === false ? (
             <>
-              <h2 className="lien_menu_carte">Inscription</h2>
-              <h2 className="lien_menu_carte" onClick={toggleConnexion}>Connexion</h2>
+              <h2 className="lien_menu_carte" onClick={boutonInscription}>Inscription</h2>
+              <h2 className="lien_menu_carte" onClick={boutonConnexion}>Connexion</h2>
             </>
           ) : (
             <>
@@ -28,9 +25,6 @@ function MenuCarte({ boolConnect, switchBool }) {
             </>
           )}
         </div>
-        {
-          switchConnexion === true ? (<Connexion/>): <></>
-        }
     </>
   );
 }
