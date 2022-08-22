@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
 import MenuCarte from './part/MenuCarte';
+import Connexion from './part/Connexion';
+import Inscription from './part/Inscription';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [switchToggle, setSwitchToggle] = useState(false);
+  const [changeButtonIns, setChangeButtonIns] = useState(false);
+  const [changeButtonCon, setChangeButtonCon] = useState(false);
   function toggleMenu(){
     setSwitchToggle(switchToggle => !switchToggle);
   }
@@ -16,14 +20,14 @@ function Header() {
     <>
         <header>
             <div className='logo-case'>
-              <div className='logo-img'>logo</div>
+              <div className='logo-img'><Link to={'/'}>logo</Link></div>
             </div>
             <nav>
                 <span>Découvrir</span>
                 <span>Contact</span>
             </nav>
-            <div className='menu_case' onClick={toggleMenu}>
-              <div className='menu-button'>
+            <div className='menu_case'>
+              <div className='menu-button' onClick={toggleMenu}>
                 <div>
                   <FontAwesomeIcon icon={faBars} className='bars-menu'/>
                 </div>
@@ -36,7 +40,13 @@ function Header() {
             </div>
         </header>
         {
-          switchToggle === true ? (<MenuCarte boolConnect={false} switchBool={switchToggle}/>) : <></>
+          switchToggle === true ? (<MenuCarte boolConnect={false} switchBool={setSwitchToggle} toggleSwitchIns={setChangeButtonIns} toggleSwitchCon={setChangeButtonCon}/>) : <></>
+        }
+        {
+          changeButtonCon === true ? (<Connexion boolToggle={setChangeButtonCon}/>) : <></>
+        }
+        {
+          changeButtonIns === true ? (<Inscription boolToggle={setChangeButtonIns}/>) : <></>
         }
     </>
   )
