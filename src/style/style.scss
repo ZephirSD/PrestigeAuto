@@ -11,6 +11,7 @@
     --width-recherche-bar: 65%;
     --height-recherche-bar: 65px;
     --height-case-switch: 50px;
+    --height-case-insCon: 500px;
     --size-button-recherche: 50px;
     --size-carte-voiture: 310px;
     --size-texte-voiture: 40px;
@@ -36,6 +37,7 @@
     --margin-top-case-switch: 35px;
     --margin-input-map: 5px;
     --padding-case-input-map: 15px;
+    --margin-vertical-case-insCon: calc((100vh - var(--height-case-insCon)) / 2);
 }
 
 body{
