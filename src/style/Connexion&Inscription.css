@@ -2,7 +2,7 @@ div.case_filter{
     position: absolute;
     width: var(--full-width);
     height: var(--full-height);
-    z-index: 5;
+    z-index: 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,14 @@ div.case_connexion{
     background-color: var(--background-header);
     border-radius: 55px;
     box-shadow: 7px 8px 17px rgba(100,100,100,0.5);
+    overflow-y: auto;
+    z-index: 6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: var(--margin-vertical-case-insCon) auto;
 }
 
 div.grid_nom_prenom{
