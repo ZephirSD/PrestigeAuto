@@ -35,5 +35,21 @@ div.case_connexion{
 div.grid_nom_prenom{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    column-gap: 25px;
+    column-gap: 60px;
+    width: var(--size-case-connexion);
+}
+
+div.toast_insc_con{
+    font-family: var(--montserrat);
+    font-size: 13px;
+    color: var(--couleur-texte);
+    background-color: var(--background-clair);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.toast_insc_con.pos_toast{
+    position: absolute;
 }
