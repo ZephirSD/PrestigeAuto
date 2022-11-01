@@ -19,7 +19,6 @@ div.case_input input{
     outline: none;
     font-family: var(--montserrat);
     font-size: 17px;
-    color: black;
 }
 
 div.case_input button{
